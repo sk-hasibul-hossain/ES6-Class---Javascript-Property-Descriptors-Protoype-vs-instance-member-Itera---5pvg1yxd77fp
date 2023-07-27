@@ -1,5 +1,5 @@
 //Write your code here
-class Api {
+class API {
   #secure;
   constructor(url, method = "GET") {
     this.url = url;
@@ -11,6 +11,7 @@ class Api {
   }
   updateUrl(url) {
     this.url = url;
+    this.#secure = url.startsWith("https");
   }
 }
 
